@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Карточка события</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main class="page">
+    <article class="event-card">
+      <h1 id="event-title"></h1>
+      <p id="event-date" class="event-detail"></p>
+      <p id="event-place" class="event-detail"></p>
+      <p id="event-description" class="event-description"></p>
+      <button id="show-program" type="button" aria-controls="program" aria-expanded="false">Показать программу</button>
+      <p id="program" class="program" hidden></p>
+    </article>
+
+    <p id="data-error" class="error" role="alert" hidden></p>
+
+    <form id="service-form" class="service-form" hidden>
+      <fieldset>
+        <legend>Дополнительные услуги</legend>
+        <label class="service-option"><input type="checkbox" id="guide"> <span id="guide-title"></span></label>
+        <label class="service-option"><input type="checkbox" id="audio"> <span id="audio-title"></span></label>
+        <label class="service-option"><input type="checkbox" id="catalog"> <span id="catalog-title"></span></label>
+      </fieldset>
+      <button type="submit">Рассчитать стоимость</button>
+      <p id="choice-error" class="error" role="alert" hidden></p>
+    </form>
+
+    <p id="result" class="result" role="status" hidden></p>
+    <pre id="report-json" class="report-json" hidden></pre>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
